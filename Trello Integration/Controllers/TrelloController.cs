@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RestSharp;
 
 namespace Trello_Integration.Controllers
@@ -8,15 +7,13 @@ namespace Trello_Integration.Controllers
     [Route("[controller]")]
     public class TrelloController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
         private readonly string boardId;
         private readonly string apiKey;
         private readonly string apiToken;
 
 
-        public TrelloController(ILogger<WeatherForecastController> logger)
+        public TrelloController()
         {
-            _logger = logger;
             boardId = "lGjOw5Hj";
             apiKey = "9170f691ec81338b951f93da9d63c4b8";
             apiToken = "ATTA20cc4ff560507973b452770b4f98fcc5774f3dcbc15a5abe2d390f2953275feb1DAFF002";
